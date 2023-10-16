@@ -1,23 +1,22 @@
-CRUD DE CLIENTES EN PYTHON UTILIZANDO FLASK# Cliente CRUD - Aplicación de Gestión de Clientes con Python, Flask y Firebase
+CRUD DE LIBROS EN PYTHON UTILIZANDO FLASK# Aplicación de Gestión de Libros con Python, Flask y Firebase
 
-La aplicación Cliente CRUD es un sistema de gestión de clientes que utiliza el framework Flask en Python, así como Firebase para realizar operaciones de Crear, Leer, Actualizar y Eliminar (CRUD) en una base de datos de clientes. Además, se aplica la programación orientada a objetos (POO).
+La aplicación LIBROS CRUD es un sistema de gestión de libros que utiliza el framework Flask en Python, así como Firebase para realizar operaciones de Crear, Leer, Actualizar y Eliminar (CRUD) en una base de datos de libros. Además, se aplica la programación orientada a objetos (POO).
 
 ## Características
 
-- Crear un nuevo cliente con los siguientes campos:
+- Crear un nuevo libro con los siguientes campos:
   - Nombre
-  - Apellido
-  - Domicilio
-  - Teléfono
-  - Correo Electrónico
+  - Autor
+  - Edición
+  - Cantidad de páginas del libro
 
-- Leer información de clientes existentes.
+- Leer información de libros existentes.
 
-- Actualizar los datos de un cliente existente.
+- Actualizar los datos de un libro existente.
 
-- Eliminar un cliente de la base de datos.
+- Eliminar un libro de la base de datos.
 
-- Buscar un cliente por apellido.
+- Buscar un libro por título.
 
 ## Requisitos
 
@@ -29,15 +28,3 @@ Firebase: Instalar usando pip (pip install firebase-admin)
 
 El archivo que se debe ejecutar es el de app.py
 
-## Organización
-
-El proyecto se organiza de la siguiente manera:
-
-- app: Contiene la lógica principal de la aplicación CRUD.
-- clasePersona: Plantilla para crear un Cliente, con sus correspondientes atributos. Funciona como superclase o clase abstracta
-- claseCliente: Plantilla que hereda de clasePersona y también posee sus atributos y métodos propios. 
-- templates/: Almacena las plantillas HTML utilizadas.
-- static/: Contiene archivos estáticos como hojas de estilo (CSS) para dar estilo a la aplicación.
-- credentials/: Posee las credenciales de la base de datos de Firebase.
-- firebaseConfig: Realiza la configuración de la base de datos de Firebase.
-- models/: Es la carpeta que contiene el clienteModel, el cual es el encargado de realizar las consultas a la base de datos de Firebase.
