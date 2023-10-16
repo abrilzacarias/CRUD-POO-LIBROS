@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="https://kit.fontawesome.com/05c2be17c9.js" crossorigin="anonymous"></script>
+  </head>
+  <div class="container">
+   <table class="table">
+    <h2>LISTADO DE LIBROS</h2>
+    {% if msj %}
+      <p>{{ msj }}</p>
+    {% endif %}
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Autor</th>
+          <th scope="col">Edicion</th>
+          <th scope="col">Cantidad de páginas</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for idLibro, libro_data in libros.items() %}
+        <tr>
+            <td>{{ libro_data['nombre'] }}</td>
+            <td>{{ libro_data['autor'] }}</td>
+            <td>{{ libro_data['edicion'] }}</td>
+            <td>{{ libro_data['cantidadPaginas'] }}</td>
+            <td>
+                <a href="{{ url_for('eliminarLibro', idLibro=idLibro)}}"
+              onclick="return confirm('¿Está seguro de que desea eliminar este libro?');">
+                    <button class="btn eliminar"><i class="fa-solid fa-trash"></i></button>
+                </a>
+
+                <a href="{{ url_for('modificarLibro', idLibro=idLibro)}}">
+                    <button class="btn modificar"><i class="fa-solid fa-pencil"></i></button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+    <div class="buscar-agregar">
+      {% if busqueda %}
+      <form action="{{ url_for('buscarLibro') }}" method="GET">
+        <label for="nombre">Buscar libro por título:</label>
+        <input type="text" name="nombre" id="nombre" class="buscar-nombre" placeholder="Ingrese el titulo del libro">
+        <button class="btn buscar" type="submit"><i class="fa-solid fa-search"></i></button>
+      </form>
+      {% endif %}
+      <a href="{{ url_for('anadirLibro') }}">
+        <button class="btn agregar">Agregar Libro</button>
+      </a>
+    </div>
+  </div>
+  <footer id="footer">
+    <p>Abril Zacaria 2023™</p>
+  </footer>
+</body>
+</html>

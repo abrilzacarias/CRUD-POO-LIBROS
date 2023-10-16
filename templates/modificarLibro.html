@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/formulario.css">
+    <title>Modificar Libro</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Modificar Libro</h2>
+        <form method="POST" action="{{ url_for('modificarLibro', idLibro=idLibro) }}" class="form">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="formulario" id="nombre" name="nombre" value="{{ libro.nombre }}" pattern="[A-Za-z]+" required title="Por favor, ingresa solo letras.">
+            </div>
+            <div class="form-group">
+                <label for="autor">Autor:</label>
+                <input type="text" class="formulario" id="autor" name="autor" value="{{ libro.autor }}" pattern="[A-Za-z]+" required title="Por favor, ingresa solo letras.">
+            </div>
+            <div class="form-group">
+                <label for="edicion">Edicion:</label>
+                <input type="text" class="formulario" id="edicion" name="edicion" value="{{ libro.edicion }}" pattern="[A-Za-z]+" required title="Por favor, ingresa solo letras.">
+            </div>
+            <div class="form-group">
+                <label for="cantPaginas">Cantidad de paginas:</label>
+                <input type="number" class="formulario" id="cantPaginas" name="cantPaginas" value="{{ libro.cantidadPaginas }}" min="0" step="1" required title="Por favor, ingresa solo letras.">
+            </div>
+            <button type="submit" class="btn agregar">Guardar Cambios</button>
+        </form>
+    </div>
+</body>
+<footer id="footer">
+    <p>Abril Zacaria 2023™</p>
+  </footer>
+</html>

@@ -1,0 +1,117 @@
+body { 
+  font-family: Arial, sans-serif; /* Fuente para el texto del cuerpo */
+  font-size: 18px;
+  background-color: #9a5d23c0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  width: 80%;
+  background-color: #f8f9fa;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.table th,
+.table td {
+  padding: 5px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+}
+
+.agregar {
+  background-color: #1ca101;
+  color: #ffffff;
+  font-weight: bold;
+}
+.agregar:hover {
+  background-color: #0f5c00;
+}
+
+.eliminar {
+  background-color: #f24539;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.eliminar:hover {
+  background-color: #bb2b2b;
+}
+
+.modificar {
+  background-color: #4c4c4c;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.modificar:hover {
+  background-color: #000;
+}
+.buscar {
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  background-color: #2980b9;;
+}
+.buscar:hover {
+  background-color: #216491;;
+}
+
+.buscar-agregar {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos en los extremos */
+  width: 80%;
+}
+
+/* Estilo para el formulario de búsqueda */
+.buscar-agregar form {
+  margin-right: 10px; /* Ajusta el margen según sea necesario */
+}
+
+.buscar-nombre {
+  width: 200px; /* Establece el ancho del input */
+  padding: 8px; /* Agrega espaciado interno para el contenido */
+  border: 1px solid #ccc; /* Agrega un borde de 1 píxel con color gris */
+  font-size: 16px; /* Establece el tamaño de fuente */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+.buscar-nombre:focus {
+  border: 1px solid #007bff; /* Cambia el borde cuando el input está enfocado */
+}
+
+#footer {
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
